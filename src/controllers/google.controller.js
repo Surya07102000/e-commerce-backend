@@ -30,7 +30,7 @@ const getGoogleUser = async (req, res) => {
     });
     console.log(token);
   }
-  res.redirect("https://the-ultimate-store.vercel.app/" + token);
+  res.redirect("https://the-ultimate-store-07.vercel.app/" + token);
 };
 
 function getTokens({ code, clientId, clientSecret, redirectUri }) {
