@@ -13,7 +13,7 @@ const getGoogleUser = async (req, res) => {
     code,
     clientId: GOOGLE_CLIENT_ID,
     clientSecret: GOOGLE_CLIENT_SECRET,
-    redirectUri: `http://localhost:8000/users/auth/google/callback`,
+    redirectUri: `https://e-commerce-backend-nine.vercel.app//users/auth/google/callback`,
   });
 
   // Fetch the user's profile with the access token and bearer
@@ -30,7 +30,7 @@ const getGoogleUser = async (req, res) => {
     });
     console.log(token);
   }
-  res.redirect("http://localhost:3000" + token);
+  res.redirect("https://the-ultimate-store.vercel.app/" + token);
 };
 
 function getTokens({ code, clientId, clientSecret, redirectUri }) {
